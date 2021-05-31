@@ -61,3 +61,26 @@ for (let i = 0; i < viewBtns.length; i++) {
     }
   });
 }
+
+// Feature 7
+
+let rightArrow = document.querySelector(".btn-secondary.my-2");
+
+rightArrow.addEventListener("click", function () {
+  let allCards = document.querySelectorAll(".col-md-4");
+  let lastCard = document.querySelectorAll(".col-md-4")[5];
+  let parent = lastCard.parentElement;
+  parent.insertBefore(allCards[5], allCards[0]);
+});
+
+// Feature 8
+
+let leftArrow = document.querySelector(".btn-primary.my-2");
+leftArrow.removeAttribute("href");
+
+leftArrow.addEventListener("click", function () {
+  let allCards = document.querySelectorAll(".col-md-4");
+  let lastCard = document.querySelectorAll(".col-md-4")[5];
+  let parent = lastCard.parentElement;
+  parent.insertBefore(allCards[0], allCards[6]);
+});
