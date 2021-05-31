@@ -48,6 +48,16 @@ navbar.addEventListener("dblclick", function () {
 
 // Feature 6
 let viewBtns = document.querySelectorAll(".btn-success");
-viewBtns.forEach((viewBtn) => {
-  viewBtn.addEventListener("mouseenter", function () {});
-});
+for (let i = 0; i < viewBtns.length; i++) {
+  viewBtns[i].addEventListener("mouseenter", function () {
+    let cardImage = document.querySelectorAll(".card-img-top")[i];
+    let cardText = document.querySelectorAll(".card-text")[i];
+
+    cardText.toggleAttribute("hidden");
+    if (cardImage.style.width === "20%") {
+      cardImage.style.width = "100%";
+    } else {
+      cardImage.style.width = "20%";
+    }
+  });
+}
