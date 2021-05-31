@@ -39,3 +39,15 @@ secondEditBtn.addEventListener("click", function () {
     secondCard.style.color = "green";
   }
 });
+
+// Feature 5
+let navbar = document.querySelector(".navbar");
+navbar.addEventListener("dblclick", function () {
+  document.head.children[2].toggleAttribute("disabled");
+});
+
+// Feature 6
+let viewBtns = document.querySelectorAll(".btn-success");
+viewBtns.forEach((viewBtn) => {
+  viewBtn.addEventListener("mouseenter", function () {});
+});
